@@ -138,7 +138,7 @@ window.TodoListItemView = Backbone.View.extend({
 /**
  * A view that displays statistics - currently the number of items
  */
-window.TodoItem_StatisticsView = Backbone.View.extend({
+window.StatisticsView = Backbone.View.extend({
   el : "#statistics",
   template: null,
   initialize: function() {
@@ -206,7 +206,7 @@ function RemoteService() {
 
 var todoCollection = new TodoCollection();
 var todoView = new TodoListView({collection: todoCollection});
-var statistics = new TodoItem_StatisticsView({collection: todoCollection});
+var statistics = new StatisticsView({collection: todoCollection});
 var remoteService = new RemoteService();
 var inputFormView = new AddItemFormView({collection: todoCollection});
 
